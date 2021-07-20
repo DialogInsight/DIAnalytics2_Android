@@ -40,10 +40,25 @@ public class UpdateContactActivity extends AppCompatActivity {
         if(currentContact == null){
             currentContact = new DIContact();
         }
-        mIdEditText.setText(currentContact.getDIContactData().getOrDefault("f_ID", "5").toString());
-        mEmailEditText.setText(currentContact.getDIContactData().getOrDefault("f_EMail", "test1@dialoginsight.com").toString());
-        mFirstNameEditText.setText(currentContact.getDIContactData().getOrDefault("f_FirstName", "Pascale").toString());
-        mLastNameEditText.setText(currentContact.getDIContactData().getOrDefault("f_LastName", "Morissette").toString());
+        if(currentContact.getDIContactData().containsKey("f_ID"))
+            mIdEditText.setText(currentContact.getDIContactData().get("f_ID").toString());
+        else
+            mIdEditText.setText("5");
+
+        if(currentContact.getDIContactData().containsKey("f_EMail"))
+            mIdEditText.setText(currentContact.getDIContactData().get("f_EMail").toString());
+        else
+            mIdEditText.setText("test1@dialoginsight.com");
+
+        if(currentContact.getDIContactData().containsKey("f_FirstName"))
+            mIdEditText.setText(currentContact.getDIContactData().get("f_FirstName").toString());
+        else
+            mIdEditText.setText("Pascale");
+
+        if(currentContact.getDIContactData().containsKey("f_LastName"))
+            mIdEditText.setText(currentContact.getDIContactData().get("f_LastName").toString());
+        else
+            mIdEditText.setText("Morissette");
     }
 
     @OnClick(R.id.button_update_activity_submit)
