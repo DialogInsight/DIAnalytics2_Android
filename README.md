@@ -107,7 +107,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     contactData.getDIContactData().put("f_EMail", mEmailEditText.getText().toString());
     contactData.getDIContactData().put("f_FirstName", mFirstNameEditText.getText().toString());
     contactData.getDIContactData().put("f_LastName", mLastNameEditText.getText().toString());
-    ```
+
     DIAnalytics.updateContact(hashMap);
     ```
 
