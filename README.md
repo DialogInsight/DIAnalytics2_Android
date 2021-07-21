@@ -16,7 +16,7 @@ The example project won't compile until you add your own “google-services.json
      ```groovy
     dependencies {
         ...
-        classpath 'com.google.gms:google-services:4.2.0'
+        classpath 'com.google.gms:google-services:4.3.8'
     }
     ```
      
