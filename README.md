@@ -118,14 +118,14 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     
 5. Send confirmation of receipt.
     ```java
-    DIAnalytics.sendPushReception("messageID");
+    DIAnalytics.sendPushReceptions("messageID");
     ```
     
     You can retrieve the message ID within the data payload by using the key OFSYSReceptionID.
     ```java
     @Override
     public void onMessageReceived(Context context, RemoteMessage remoteMessage) {
-          DIAnalytics.sendPushReception(remoteMessage.getData().get("OFSYSReceptionID"));
+          DIAnalytics.sendPushReceptions(remoteMessage.getData().get("OFSYSReceptionID"));
           ...
     }
     ```
