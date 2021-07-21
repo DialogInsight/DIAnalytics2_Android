@@ -99,9 +99,6 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
      Note: 
      the DI fields always start with a "f_". In the DI project fields page, look at the fields tagged as “primary field” and note their      code. In the following steps, just prepend “f_” with any field code. For instance, a DI field with the code “idCustomer” will            become “f_idCustomer”.
 
-     This is made in two simples step. First, gather the primary key fields informations in a HashMap.
-
-     For example, a project where the unique key is composed of the EMail field, do:
      ```java
     DIContact contactData = new DIContact();
     contactData.getDIContactData().put("f_EMail", mEmailEditText.getText().toString());
