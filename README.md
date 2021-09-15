@@ -139,8 +139,8 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
               });
      DIAnalytics.GetGuid ("{token}"). AddOnSuccessListener (new OnSuccessListener <String> () {
                   @Override
-                  public void onSuccess (String result) {
-                      guid.setText (result);
+                  public void onSuccess (String guid) {
+                      DIUtils.displayLog ("Current guid is:" + guid);
                   }
               });
 ```
