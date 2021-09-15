@@ -129,6 +129,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     When the app is in the background, the data payload is delivered in the extras of the intent of your launcher Activity. When the app     is in the foreground, the data payload is delivered to the onMessageReceived.
     
 6. (optional) If your project uses the "Trusted identity" flag, you must pass the guid linked to your contact, the Firebase token and the identity fields of the contact to an authenticated web service. See [doc](http://app.dialoginsight.com/webservices/#tab=client&section=services&application=OFC4&service=Mobile&method=Identity). To retrieve this information from the sdk, you can do:
+
  ```java
      DIAnalytics.requestToken (). AddOnSuccessListener (new OnSuccessListener <String> () {
                   @Override
@@ -142,7 +143,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
                       guid.setText (result);
                   }
               });
-    ```
+```
     
 ## Authors
 Dialog Insight, info@dialoginsight.com
