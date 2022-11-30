@@ -92,7 +92,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     this.registerReceiver(n, filter);
     ```
 
-3. Send information about the user as an HashMap using the function DIAnalytics.identify(hashmap)
+3. Send information about the user as an HashMap using the function DIAnalytics.updateContact(hashmap)
 
      In order to identify a user of the application as a contact of your DI project, you must provide the information corresponding to        the fields of the [unique key][2].
 
@@ -122,7 +122,7 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     ```java
     @Override
     public void onMessageReceived(Context context, RemoteMessage remoteMessage) {
-          DIAnalytics.sendPushReceptions(remoteMessage.getData().get("OFSYSReceptionID"));
+          DIAnalytics.sendPushReceptions(remoteMessage.getData().get("PushId"));
           ...
     }
     ```
