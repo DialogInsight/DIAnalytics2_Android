@@ -118,11 +118,11 @@ For more information, refer to [Firebase Cloud Messaging docs][1]
     DIAnalytics.sendPushReceptions("messageID");
     ```
     
-    You can retrieve the message ID within the data payload by using the key PushId.
+    You can retrieve the message ID within the data payload by using the key OFSYSReceptionID.
     ```java
     @Override
     public void onMessageReceived(Context context, RemoteMessage remoteMessage) {
-          DIAnalytics.sendPushReceptions(remoteMessage.getData().get("PushId"));
+          DIAnalytics.sendPushReceptions(remoteMessage.getData().get("OFSYSReceptionID"));
           ...
     }
     ```
